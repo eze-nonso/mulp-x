@@ -1,0 +1,25 @@
+<div class="top" fxLayout="row wrap" fxLayoutAlign="space-between">
+  <h1 class="title" fxFlex.lt-sm="100%">Recent Activities</h1>
+  <button mat-button>See all</button>
+</div>
+
+<div class="payments" fxLayout="column nowrap" fxLayoutGap="10px">
+  <div *ngFor="let item of fives">
+    <div class="payment" fxLayout='row nowrap' fxLayoutAlign="space-between">
+      <div class="title-section" fxFlex fxLayout fxLayoutAlign="space-between center" fxLayoutGap="12px">
+        <div class="image" fxLayout fxLayoutAlign="center center">
+          <mat-icon svgIcon="salary"></mat-icon>
+        </div>
+        <div class="text-content" fxLayout="column nowrap" fxLayoutGap="4px">
+          <h1>Salary Payment</h1>
+          <p>12 of 12 people sent</p>
+        </div>
+      </div>
+      <div class="amount" fxFlex fxLayout="column nowrap" fxLayoutAlign="end end">
+        <strong class="figure">{{200000 | currency: 'NGN': 'symbol-narrow'}}</strong>
+        <span class="label">Total payment</span>
+        <span class="when">Today</span>
+      </div>
+    </div>
+  </div>
+</div>

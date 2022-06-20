@@ -1,0 +1,42 @@
+@import "src/app/styles/mulpx-palette";
+@import "src/app/styles/variables";
+
+.nav-item {
+  .icon {
+    path {
+      fill: $text-fade-color;
+    }
+  }
+
+  &.active {
+    .icon {
+      path {
+        fill: map-get($mulp-x-accent, 500);
+      }
+    }
+  }
+
+  &:hover:not(.active) {
+    .icon {
+      path {
+        fill: $text-fade-dark-color;
+      }
+    }
+  }
+}
+
+.info {
+  .has-chat {
+    mat-icon {
+      path {
+        fill: $chat-notification-color;
+      }
+    }
+  }
+
+  mat-icon {
+    path {
+      fill: #000;
+    }
+  }
+}

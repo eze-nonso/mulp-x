@@ -1,0 +1,68 @@
+@import "src/app/styles/main";
+@import "src/app/styles/mulpx-palette";
+
+.top {
+  margin-bottom: 18px;
+
+  .title {
+    @include common-text-style(500, 24px, 24px);
+  }
+
+  button {
+    color: $light-green;
+  }
+}
+
+.payments {
+  .payment {
+    border: 1px solid #DBD0C2;
+    border-radius: 10px;
+    padding: 10px 9px;
+
+    .title-section {
+      .image {
+        width: 48px;
+        height: 100%;
+        background-color: map-get($mulp-x-accent, 500);
+        border-radius: 10px;
+        border: 1px solid map-get($mulp-x-accent, 500);
+
+        mat-icon {
+          height: 24px;
+          width: 24px;
+        }
+      }
+
+      .text-content {
+        h1, p {
+          margin: 0;
+        }
+
+        h1 {
+          @include common-text-style(400, 15px, 15px);
+        }
+
+        p {
+          @include common-text-style(normal, 10px, 12px);
+          font-family: 'Söhne Test', sans-serif;
+        }
+      }
+    }
+
+    .amount {
+      .figure {
+        @include common-text-style(400, 15px, 15px);
+      }
+
+      .label {
+        @include common-text-style(normal, 8px, 9px);
+        color: $text-fade-color;
+        margin-bottom: 7px;
+      }
+
+      .when {
+        @include common-text-style(normal, 10px, 12px);
+      }
+    }
+  }
+}

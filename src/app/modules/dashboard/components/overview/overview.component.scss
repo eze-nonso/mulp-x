@@ -1,0 +1,29 @@
+@import "src/app/styles/main";
+@import "src/app/styles/mulpx-palette";
+
+.top {
+  .title {
+    @include common-text-style(500, 24px, 24px);
+  }
+
+  ng-select {
+    min-width: 100px;
+  }
+}
+
+highcharts-chart {
+  width: 100%;
+  display: block;
+}
+
+.download {
+  color: $light-green;
+  border-color: $light-green;
+  @include common-text-style(400, 16px, 16px);
+  border-radius: 10px;
+  width: 208px;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  padding: 16px 11px;
+}

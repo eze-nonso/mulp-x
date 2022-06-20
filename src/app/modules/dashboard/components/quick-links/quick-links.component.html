@@ -1,0 +1,64 @@
+<h1 class="title">Quick Links</h1>
+<p class="sub">Carry out your financial transactions with ease</p>
+
+<div class="multiple-pay" fxLayout fxLayoutAlign="space-between center">
+  <div class="h-100" fxLayout>
+    <div class="dial" fxLayout fxLayoutAlign="center center">
+      <mat-icon svgIcon="dial"></mat-icon>
+    </div>
+    <div class="content" fxLayout="column nowrap">
+      <h2>Multiple Pay</h2>
+      <sub>Send payment to many people at a go.!</sub>
+      <button (click)="openSendDialog()" color="accent" mat-button mat-flat-button>Send Now</button>
+    </div>
+  </div>
+  <img alt="Networking" class="network" src="assets/images/networking.png">
+</div>
+
+<div class="others" fxLayout="row wrap" fxLayoutAlign="center" fxLayoutGap="17px grid">
+  <div fxFlex.gt-sm="calc(50% - 8.5px)" fxFlex.lt-lg="100%">
+    <div class="other-action" fxLayout="column nowrap"
+         fxLayoutAlign="space-between">
+      <mat-icon svgIcon="dial"></mat-icon>
+      <div class="text-content">
+        <h1>Airtime Bank</h1>
+        <sub>Save airtime for rainy days & for future.</sub>
+      </div>
+    </div>
+  </div>
+  <div fxFlex.gt-sm="calc(50% - 8.5px)" fxFlex.lt-lg="100%">
+    <div class="other-action" fxLayout="column nowrap"
+         fxLayoutAlign="space-between">
+      <mat-icon svgIcon="dial"></mat-icon>
+      <div class="text-content">
+        <h1>Multiple Recharge </h1>
+        <sub>Send airtime or data to millions at a go!</sub>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="group-payment">
+  <div class="header" fxLayout fxLayoutAlign="space-between">
+    <h2 class="title">Group Payment</h2>
+    <button mat-button>View all Groups</button>
+  </div>
+  <div fxLayout fxLayoutGap="20px">
+    <div *ngFor="let item of categories" class="category">
+      <div class="icon-wrapper" fxLayout fxLayoutAlign="center center">
+        <mat-icon [svgIcon]="item.icon"></mat-icon>
+      </div>
+      <p class="title">{{item.title}}</p>
+      <sub class="name">{{item.name}}</sub>
+    </div>
+    <div class="category new">
+      <div class="icon-wrapper" fxLayout fxLayoutAlign="center center">
+        <button mat-icon-button>
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+      <p class="title">Create New Group</p>
+    </div>
+  </div>
+</div>
+

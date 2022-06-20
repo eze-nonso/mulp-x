@@ -1,1 +1,16 @@
-<p>main works!</p>
+<app-header (navToggle)="drawer.toggle()"></app-header>
+<div class="main-container" fxHide.lt-md>
+  <div fxLayout>
+    <app-side-bar fxHide.lt-md></app-side-bar>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<mat-sidenav-container autosize fxHide.gt-sm>
+  <mat-sidenav #drawer>
+    <app-side-bar></app-side-bar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,175 @@
+@import "src/app/styles/variables";
+@import "src/app/styles/main";
+
+.title {
+  @include common-text-style(500, 24px, 24px);
+}
+
+.sub {
+  @include common-text-style(400, 14px, 14px);
+  color: $text-fade-color;
+  margin-bottom: 20px;
+}
+
+.multiple-pay {
+  width: 100%;
+  padding: 14px 8px;
+  height: 90px;
+  background: $main-bg-color;
+  border-radius: 10px;
+  min-width: 295px;
+  margin-bottom: 17px;
+
+  .h-100 {
+    height: 100%;
+  }
+
+  .dial {
+    background: #3D4234;
+    height: 100%;
+    width: 41px;
+    margin-right: 11px;
+    border-radius: 10px;
+
+    mat-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .content {
+    h2 {
+      margin: 0;
+      @include common-text-style(500, 15px, 15px);
+    }
+
+    sub {
+      @include common-text-style(300, 8px, 8px);
+    }
+
+    button {
+      margin-top: 14px;
+      width: 85px;
+      height: 25px;
+      padding: 5px 15px;
+      @include common-text-style(400, 12px, 14px);
+    }
+  }
+
+  .network {
+    height: auto;
+    width: 33%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.others {
+  margin-bottom: 4px !important;
+}
+
+.other-action {
+  border: 1px solid $notification-bg-color;
+  border-radius: 10px;
+  padding: 24px 12px;
+
+  mat-icon {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 20px;
+  }
+
+  .text-content {
+    h1 {
+      @include common-text-style(500, 15px, 15px);
+      margin: 0;
+    }
+
+    sub {
+      @include common-text-style(300, 8px, 8px);
+    }
+  }
+}
+
+.group-payment {
+  .header {
+    margin-bottom: 17px;
+
+    .title {
+      @include common-text-style(500, 16px, 16px);
+      margin: 0;
+    }
+
+    button {
+      color: #0DBA9C;
+      @include common-text-style(400, 12px, 12px);
+    }
+  }
+
+  .category {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    flex: 0 1 25%;
+
+    .icon-wrapper {
+      border: 1px solid map-get($mulp-x-accent, 500);
+      width: 50px;
+      height: 50px;
+      margin-bottom: 7px;
+      border-radius: 100%;
+
+      mat-icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &:not(.new) {
+      .title {
+        font-family: 'Söhne Test', Roboto, serif;
+      }
+    }
+
+    .title {
+      @include common-text-style(normal, 12px, 14px);
+      margin: 0;
+      text-align: center;
+    }
+
+    .name {
+      @include common-text-style(normal, 10px, 12px);
+      color: $text-fade-color;
+      font-family: 'Söhne Test', Roboto, serif;
+    }
+
+    &.new {
+      &:hover {
+        cursor: pointer;
+      }
+
+      .title {
+        @include common-text-style(400, 12px, 12px);
+        color: $light-green;
+      }
+
+      .icon-wrapper {
+        border-color: $light-green;
+
+        button {
+          width: 100%;
+          height: 100%;
+        }
+
+        mat-icon {
+          color: $light-green;
+          font-size: 40px;
+          width: unset;
+          height: unset;
+        }
+      }
+    }
+  }
+}

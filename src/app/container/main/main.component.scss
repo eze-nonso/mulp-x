@@ -1,0 +1,16 @@
+@import 'src/app/styles/main';
+
+.main-container {
+  padding: 0 2rem 2rem;
+}
+
+mat-sidenav-container {
+  background: transparent;
+
+  mat-sidenav-content {
+    overflow: auto;
+    padding: 0 2rem;
+    height: calc(100vh - 78px - 4rem);
+    min-height: calc(100vh - 78px - 4rem);
+  }
+}

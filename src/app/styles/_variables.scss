@@ -1,0 +1,20 @@
+@use 'sass:math';
+
+$main-bg-color: #f5f1ec;
+$notification-bg-color: #DBA976;
+$chat-notification-color: #E2574C;
+$text-fade-color: #787878;
+$text-fade-dark-color: #484848;
+$default-font-family: 'Neue Haas Unica';
+$sub-color: #FBFBFB;
+$light-green: #0DBA9C;
+@mixin common-text-style($font-weight: 500, $font-size: 16px, $line-height: 24px) {
+  font-weight: $font-weight !important;
+  line-height: calculateRem($line-height) !important;
+  font-size: calculateRem($font-size) !important;
+}
+
+@function calculateRem($value) {
+  $remValue: (math.div($value, ($value * 0 + 1)) / 16) + rem;
+  @return $remValue;
+}

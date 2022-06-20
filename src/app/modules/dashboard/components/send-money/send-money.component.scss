@@ -1,0 +1,52 @@
+@import "src/app/styles/mulpx-palette";
+@import "src/app/styles/main";
+
+:host {
+  display: block;
+  position: relative;
+  max-width: 400px;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: -55px;
+}
+
+.top {
+  margin: 55px 0 48px;
+
+  .left {
+    h1 {
+      @include common-text-style(700, 24px, 29px);
+      margin-bottom: 10px;
+    }
+
+    p {
+      @include common-text-style(400, 12px, 14px);
+      color: #888888;
+      margin: 0;
+    }
+  }
+
+  img {
+    height: auto;
+  }
+}
+
+form {
+  label {
+    @include common-text-style(400, 14px, 17px);
+    margin-bottom: 9px;
+  }
+
+  mat-form-field {
+    margin-bottom: 50px;
+  }
+
+  button {
+    @include common-text-style(400, 18px, 22px);
+    width: 100%;
+    padding: 15px;
+  }
+}

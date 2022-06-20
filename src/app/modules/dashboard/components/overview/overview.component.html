@@ -1,0 +1,13 @@
+<div class="top" fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayoutGap="15px">
+  <h1 class="title">Overview</h1>
+  <ng-select (change)="updateSeries()" [(ngModel)]="selectedInterval" [items]="intervalOptions"
+             placeholder="Select Interval"></ng-select>
+</div>
+
+<highcharts-chart
+  [(update)]="updateFlag"
+  [Highcharts]="Highcharts"
+  [options]="chartOptions"
+></highcharts-chart>
+
+<button class="download" mat-stroked-button>Download mini statement</button>

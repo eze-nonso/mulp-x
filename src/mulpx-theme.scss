@@ -3,6 +3,7 @@
 @use '@angular/material' as mat;
 // Plus imports for other components in your app.
 @import "src/app/styles/mulpx-palette";
+@import "src/app/styles/main";
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -18,8 +19,13 @@ $mulp-x-theme: mat.define-light-theme((
   )
 ));
 
+$mulp-x-typography: mat.define-typography-level(14px, $font-weight: 500, $font-family: $default-font-family);
+
+$mulp-x-typography-config: mat.define-typography-config($font-family: $default-font-family, $body-1: $mulp-x-typography);
+
+@include mat.core($mulp-x-typography-config);
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($mulp-x-theme);
-
