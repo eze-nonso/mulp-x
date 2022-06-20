@@ -29,11 +29,11 @@ export class QuickLinksComponent {
       .pipe(switchMap((val: number | null) => {
         if (val) {
           return this.dialog.open(NotificationComponent, {
-            data: {variant: 'success'}
+            data: 'success', panelClass: 'notification-dialog'
           }).afterClosed();
         }
         return this.dialog.open(NotificationComponent, {
-          data: {variant: 'failure'}
+          data: 'failure', panelClass: 'notification-dialog'
         }).afterClosed();
       }))
       .subscribe();

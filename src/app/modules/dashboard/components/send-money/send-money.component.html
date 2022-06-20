@@ -12,8 +12,8 @@
 <form #fundForm="ngForm" (ngSubmit)="submit()" fxLayout="column nowrap">
   <label for="amountCtrl">Amount</label>
   <mat-form-field appearance="outline" class="send-money-input">
-    <input #amountCtrl="ngModel" [(ngModel)]="amount" [max]="data.balance" id="amountCtrl" matInput min="100"
-           name="amountCtrl" required type="number">
+    <input #amountCtrl="ngModel" [(ngModel)]="amount" [disabled]="isSending" [max]="data.balance" id="amountCtrl" matInput
+           min="100" name="amountCtrl" required type="number">
     <div fxLayout fxLayoutGap="12px" matPrefix><span>N</span>
       <mat-divider [vertical]="true"></mat-divider>
     </div>

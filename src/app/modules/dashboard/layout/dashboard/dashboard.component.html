@@ -31,16 +31,16 @@
 
 <mat-divider class="other-separator"></mat-divider>
 
-<div class="other" fxLayout>
+<div class="other" fxLayout="row" fxLayout.lt-xl="row wrap">
   <div fxFlex>
     <app-quick-links></app-quick-links>
   </div>
-  <mat-divider class="other-separator" inset vertical></mat-divider>
-  <div fxFlex>
+  <mat-divider class="other-separator" fxHide.lt-md inset vertical></mat-divider>
+  <div fxFlex fxFlex.lt-md="100%" ngClass.lt-md="spacer">
     <app-recent-activities></app-recent-activities>
   </div>
-  <mat-divider class="other-separator" inset vertical></mat-divider>
-  <div fxFlex>
+  <mat-divider class="other-separator" fxHide.lt-lg inset vertical></mat-divider>
+  <div fxFlex fxFlex.lt-lg="100%" ngClass.lt-lg="spacer">
     <app-overview></app-overview>
   </div>
 </div>

@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, Inject} from '@angular/core';
+import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-notification',
@@ -6,5 +7,8 @@ import {Component} from '@angular/core';
   styleUrls: ['./notification.component.scss']
 })
 export class NotificationComponent {
+  public isSuccess = this.data === 'success';
 
+  constructor(@Inject(MAT_DIALOG_DATA) public data: string) {
+  }
 }

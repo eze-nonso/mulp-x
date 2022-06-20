@@ -4,9 +4,11 @@
 :host {
   display: block;
   position: relative;
+  max-width: 400px;
 }
 
 .info {
+  margin-top: 92px;
   margin-bottom: 106px;
 
   .icon-wrapper {
@@ -15,13 +17,20 @@
     border-radius: 100%;
     background: map-get($mulp-x-primary, 500);
 
+    &.failure {
+      background: $chat-notification-color;
+    }
+
     mat-icon {
-      font-size: 31px;
+      font-size: 25px;
+      font-weight: bolder;
+      color: #FFF;
     }
   }
 
   p {
     @include common-text-style(700, 24px, 29px);
+    text-align: center;
   }
 }
 
@@ -34,5 +43,5 @@
 .close-top {
   position: absolute;
   right: 0;
-  top: -35px;
+  top: -95px;
 }

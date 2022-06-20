@@ -2,11 +2,11 @@
   <mat-icon>close</mat-icon>
 </button>
 
-<div class="info" fxLayout="column" fxLayoutGap="41px">
-  <div class="icon-wrapper" fxLayout fxLayoutAlign="center center">
-    <mat-icon>done</mat-icon>
+<div class="info" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="41px">
+  <div [ngClass]="{failure: !isSuccess}" class="icon-wrapper" fxLayout fxLayoutAlign="center center">
+    <mat-icon>{{isSuccess ? 'done' : 'close'}}</mat-icon>
   </div>
-  <p>Money sent successfully!</p>
+  <p>{{isSuccess ? 'Money sent successfully!' : 'Transaction failed!'}}</p>
 </div>
 
 <button [mat-dialog-close]="null" class="close" color="primary" mat-flat-button>Done</button>

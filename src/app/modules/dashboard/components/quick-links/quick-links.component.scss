@@ -19,6 +19,9 @@
   border-radius: 10px;
   min-width: 295px;
   margin-bottom: 17px;
+  @media only screen and (max-width: 960px) {
+    min-width: unset;
+  }
 
   .h-100 {
     height: 100%;
