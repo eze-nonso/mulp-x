@@ -106,14 +106,15 @@
 .other-separator {
   margin: 24px 0;
 
+  &.d-none {
+    display: none;
+  }
+
   &[vertical] {
     margin: -24px 24px 0;
-  }
-}
-
-.other {
-  .spacer {
-    margin-top: 30px;
+    @media only screen and (max-width: 1279px) {
+      margin-bottom: -24px;
+    }
   }
 }
 
